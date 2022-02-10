@@ -3,8 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Race;
 
-class CreateRacesTable extends Migration
+class UpdatePlayersTableAddRace extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +14,10 @@ class CreateRacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('races', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string("name");
+        Schema::table('players', function (Blueprint $table) {
+          
+            $table->foreignIdFor(Race::class);
+           
         });
     }
 
@@ -27,6 +28,6 @@ class CreateRacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('races');
+        //
     }
 }
