@@ -15,10 +15,12 @@ class UpdatePlayersTableAddRace extends Migration
     public function up()
     {
         Schema::table('players', function (Blueprint $table) {
-          
+            if (!Schema::hasColumn('players', 'race_id')) {
+
             $table->foreignIdFor(Race::class);
            
-        });
+        }
+    });
     }
 
     /**
