@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\GameController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +30,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/playthegame', function () {
-    return Inertia::render('PlayTheGame');
-})->name('playthegame');
+
+Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
+
+    Route::group(['middleware' => ['auth', 'verified']], function () {
+
+        Route::get('/playthegame',[GameController::class, "showActiveGamelist"])->name('playthegame');
+
+
+    });
+});
