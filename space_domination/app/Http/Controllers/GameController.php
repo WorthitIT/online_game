@@ -23,8 +23,9 @@ class GameController extends Controller
     public function startGame(Request $request, $game_id){
         
         $game = Game::findOrFail($game_id);
+        // $race = Race::findOrFail($race_id);
         return Inertia::render('TheGame',
-        ["game_staet" => $game]
+        ["game_state" => $game]
         ); 
     }
 }
