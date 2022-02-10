@@ -1,6 +1,24 @@
 <template>
-    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z" fill="#6875F5"/>
-      <path d="M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z" fill="#6875F5"/>
-    </svg>
+    
+<svg width="320px" height="58px" viewBox="0 0 320 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="38.9820031%" cy="35.6101415%" fx="38.9820031%" fy="35.6101415%" r="77.8221641%" id="radialGradient-yzh-z__-dv-1">
+            <stop stop-color="#DDDDDD" offset="0%"></stop>
+            <stop stop-color="#1E4071" offset="99.9738787%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(-37.000000, -12.000000)">
+            <g id="Group" transform="translate(37.000000, 14.000000)" fill="url(#radialGradient-yzh-z__-dv-1)" stroke="#979797">
+                <circle id="Oval" cx="25" cy="25" r="24.5"></circle>
+            </g>
+            <text id="SPACE" font-family="Manrope-Light, Manrope" font-size="24" font-weight="300" fill="#FFFFFF">
+                <tspan x="104" y="30">SPACE</tspan>
+            </text>
+            <text id="DOMINATION" font-family="Manrope-ExtraBold, Manrope" font-size="40" font-weight="700" fill="#FFFFFF">
+                <tspan x="102" y="69">DOMINATION</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
 </template>
