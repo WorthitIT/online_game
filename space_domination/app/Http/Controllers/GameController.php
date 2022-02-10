@@ -18,6 +18,12 @@ class GameController extends Controller
         return Inertia::render('PlayTheGame',
         [ "active_games" => $games ]
         ); 
-
+      
+    }
+    public function startGame(Request $request){
+        
+        return Inertia::render('TheGame',
+        [ "created_at" => $games ]
+        ); 
     }
 }
