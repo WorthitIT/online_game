@@ -1,2 +1,2 @@
 # online_game
-Stage opdracht voor onlie game
+Stage opdracht voor online game
