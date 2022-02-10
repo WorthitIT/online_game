@@ -14,8 +14,10 @@ class UpdatePlayersTableAddGame extends Migration
     public function up()
     {
         Schema::table('players', function (Blueprint $table) {
-          
+            if (!Schema::hasColumn('games', 'game_id')) {
+        
             $table->foreignIdFor(Game::class);
+            }
            
         });
     }

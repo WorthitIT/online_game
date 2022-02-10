@@ -15,10 +15,12 @@ class UpdateGamesTableAddStatus extends Migration
     {
         //
         Schema::table('games', function (Blueprint $table) {
-          
-            $table->enum("status", ['open','running','armaggedon','finished'])->default('open');
-            $table->timestamp("armaggedon_time")->nullable();
-            $table->integer('armaggedon_duration')->default(7);
+            if (!Schema::hasColumn('games', 'status')) {
+         
+                $table->enum("status", ['open','running','armaggedon','finished'])->default('open');
+                $table->timestamp("armaggedon_time")->nullable();
+                $table->integer('armaggedon_duration')->default(7);
+            }
         });
     }
 
