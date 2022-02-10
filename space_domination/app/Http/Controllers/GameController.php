@@ -20,10 +20,11 @@ class GameController extends Controller
         ); 
       
     }
-    public function startGame(Request $request){
+    public function startGame(Request $request, $game_id){
         
+        $game = Game::findOrFail($game_id);
         return Inertia::render('TheGame',
-        [ "created_at" => $games ]
+        ["game_staet" => $game]
         ); 
     }
 }
