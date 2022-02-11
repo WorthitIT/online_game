@@ -3,7 +3,7 @@
          <Head :title="title" />
 
 
-         <div class="min-h-screen bg-gray-900">
+         <div class="min-h-screen bg-gray-900 picture-background">
             <nav class="bg-gray-900 border-b border-gray-200">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,5 +131,10 @@
     background-color: #48ADD0;
     height: 30px;
     line-height: 18px;
+}
+.picture-background{
+    background-image: url('/img/background.jpeg');
+    background-size: cover;
+    background-position: 50% 50%;
 }
 </style>
