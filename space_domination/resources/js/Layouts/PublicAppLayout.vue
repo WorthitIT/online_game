@@ -38,7 +38,7 @@
                                 </jet-nav-link>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex items-center">
-                                <jet-nav-link class="text-white action-button"  :href="route('dashboard')" :active="route().current('dashboard')">
+                                <jet-nav-link class="text-white action-button"  :href="route('playnow')" :active="route().current('playnow')">
                                     PLAY NOW
                                 </jet-nav-link>
                             </div>

@@ -32,9 +32,15 @@ Route::get('/about', function () {
         Route::get('/roadmap', function () {
             return Inertia::render('Public/Roadmap', [  ]);
         })->name("roadmap");
-            Route::get('/register', function () {
+            
+        Route::get('/register', function () {
                 return Inertia::render('Public/Register', [  ]);
         })->name("register");
+        
+        Route::get('/playnow', function () {
+            return Inertia::render('Public/PlayNow', [  ]);
+    })->name("playnow");
+    
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
