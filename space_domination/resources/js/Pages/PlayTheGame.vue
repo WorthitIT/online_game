@@ -1,5 +1,5 @@
 <template>
-    <app-layout title="Dashboard">
+    <public-app-layout title="Dashboard">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                play game
@@ -14,17 +14,17 @@
             </div>
         </div>
     
-    </app-layout>
+    </public-app-layout>
 </template>
 
 <script>
     import { defineComponent } from 'vue'
-    import AppLayout from '@/Layouts/AppLayout.vue'
+   import PublicAppLayout from "@/Layouts/PublicAppLayout.vue"
     import PlayTheGameComponent from '@/Components/PlayTheGameComponent.vue'
 
     export default defineComponent({
         components: {
-            AppLayout,
+           PublicAppLayout,
             PlayTheGameComponent,
          
         },

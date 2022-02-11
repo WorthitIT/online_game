@@ -23,17 +23,17 @@
                                 </jet-nav-link>
                             </div>
                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link class="text-white" :href="route('playthegame')" :active="route().current('playthegame')">
+                                <jet-nav-link class="text-white" :href="route('about')" :active="route().current('about')">
                                     ABOUT
                                 </jet-nav-link>
                             </div>
                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link  class="text-white" :href="route('playthegame')" :active="route().current('playthegame')">
+                                <jet-nav-link  class="text-white" :href="route('roadmap')" :active="route().current('roadmap')">
                                     ROADMAP
                                 </jet-nav-link>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link class="text-white"  :href="route('playthegame')" :active="route().current('playthegame')">
+                                <jet-nav-link class="text-white"  :href="route('register')" :active="route().current('register')">
                                     REGISTER
                                 </jet-nav-link>
                             </div>

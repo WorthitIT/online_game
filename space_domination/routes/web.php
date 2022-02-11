@@ -25,7 +25,16 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+Route::get('/about', function () {
+    return Inertia::render('Public/About', [  ]);
+        })->name("about");
+        
+        Route::get('/roadmap', function () {
+            return Inertia::render('Public/Roadmap', [  ]);
+        })->name("roadmap");
+            Route::get('/register', function () {
+                return Inertia::render('Public/Register', [  ]);
+        })->name("register");
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
@@ -38,5 +47,7 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
         Route::get('/playthegame',[GameController::class, "showActiveGamelist"])->name('playthegame');
 
         Route::get('/thegame/{game_id}/',[GameController::class, "startGame"])->name('thegame');
-    });
+      
+      
+});
 });

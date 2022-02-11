@@ -14,13 +14,15 @@
 <script>
 import JetNavLink from"@/Jetstream/NavLink"
 import JetButton from"@/Jetstream/Button"
+
 export default {
     setup() {
         
     },
     components:{
         JetNavLink,
-        JetButton
+        JetButton,
+        
     },
     props: [
         "games"
