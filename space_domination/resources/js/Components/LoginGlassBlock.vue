@@ -14,8 +14,8 @@
       <input type="checkbox" class=" text-orange" checked="checked" name="remember"> Remember me
     </label>
     <div class="w-full text-gray-800">
-  <button type="submit" class="py-2 px-2 bg-pink text-black">Login</button>
-    <a type="button" class="cancelbtn py-2 px-2 bg-green">Register</a>
+  <button type="submit" class="py-2 px-2 bg-pink text-black m-0.5 rounded-lg">Login</button>
+    <a type="button" class="cancelbtn py-2 px-2 bg-green m-0.5 rounded-lg ">Register</a>
 </div>
     <span class="password w-full"><a href="#">Forgot password?</a></span>
   </div>
