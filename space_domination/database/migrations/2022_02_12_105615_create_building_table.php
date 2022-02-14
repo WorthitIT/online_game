@@ -15,6 +15,14 @@ class CreateBuildingTable extends Migration
     {
         Schema::create('building', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("image");
+            $table->float("armour");
+            $table->float("health");
+            $table->float("strength");
+            $table->json("building_costs");
+            $table->float("building_time");
+
             $table->timestamps();
         });
     }

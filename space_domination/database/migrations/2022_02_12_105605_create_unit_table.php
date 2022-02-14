@@ -15,6 +15,15 @@ class CreateUnitTable extends Migration
     {
         Schema::create('unit', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("image");
+            $table->float("strength");
+            $table->float("armour");
+            $table->float("health");
+            $table->float("speed");
+            $table->json("building_costs");
+            $table->float("building_time");
+            $table->json("resistances");
             $table->timestamps();
         });
     }
