@@ -2,4 +2,27 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.blue-glass{
+    background: rgba(72, 173, 208, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    border: 1px solid rgba(72, 173, 208, 0.3);
+clip-path: polygon(0% 20%, 20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%);
+border: 1px solid rgba(72, 173, 208 );
+height: 90%;
+padding: 10px 60px;
+}
+
+.password{
+position: relative;
+top: 10px;
+
+}
+.submit{
+border: 1px solid rgba(72, 173, 208 );
+width: 100px;
+}
+
 
