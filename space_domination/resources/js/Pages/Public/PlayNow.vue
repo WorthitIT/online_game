@@ -15,15 +15,18 @@
                 <div class="sm:grid sm:grid-cols-3 gap-6">
                 <div class="sm:col-span-1 overflow-hidden shadow-xl sm:rounded-lg ">
             
-                   
+                <div class="w-4/5 m-auto" >  
              <login-glass-block title="Dashboard"/>
+             </div>
                    </div>
-                    <div class=" geert smoll piece of teror and horror sm:col-span-2 text-white">
-                       <h2>This is a game about con quest about destuction. 
-                           Some where in the galaxy is a evil growing that will destroy all if it grows to far all will be toast. You can make a choice to die with honor and glory
-                           or die like a nobody lost in space. Log in and play now to find out.
+                    <div class="sm:col-span-2">
+                        <div class="w-1/2 m-auto">
+                       <h2 class="font-extrabold text-2xl text-blue">BUILD, EXPAND, FIGHT and DOMINATE
                        </h2>
+                       <p class="text-gray-100 text-sm">This game is still in development. </p>
+                       <p>TODO: @GvdV -> Replace this content with a content block from the database!</p>
                    </div>
+                    </div>
                     </div>
                  </div>
               </div>
