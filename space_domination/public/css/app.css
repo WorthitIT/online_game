@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.19 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -963,12 +963,6 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-.m-0\.5 {
-  margin: 0.125rem;
-}
-.m-0 {
-  margin: 0px;
-}
 .m-auto {
   margin: auto;
 }
@@ -1325,14 +1319,6 @@ select {
 .border-transparent {
   border-color: transparent;
 }
-.bg-pink {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 73 219 / var(--tw-bg-opacity));
-}
-.bg-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 206 102 / var(--tw-bg-opacity));
-}
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -1518,10 +1504,6 @@ select {
 }
 .tracking-wider {
   letter-spacing: 0.05em;
-}
-.text-orange {
-  --tw-text-opacity: 1;
-  color: rgb(255 179 0 / var(--tw-text-opacity));
 }
 .text-blue {
   --tw-text-opacity: 1;
@@ -1857,10 +1839,6 @@ body {
     margin-left: 1.5rem;
   }
 
-  .sm\:ml-0 {
-    margin-left: 0px;
-  }
-
   .sm\:block {
     display: block;
   }
@@ -1879,10 +1857,6 @@ body {
 
   .sm\:h-10 {
     height: 2.5rem;
-  }
-
-  .sm\:h-20 {
-    height: 5rem;
   }
 
   .sm\:w-10 {
@@ -2015,10 +1989,6 @@ body {
 
   .sm\:text-left {
     text-align: left;
-  }
-
-  .sm\:text-right {
-    text-align: right;
   }
 }
 @media (min-width: 768px) {

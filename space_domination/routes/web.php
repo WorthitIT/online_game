@@ -45,9 +45,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/breedselect', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/raceselect', function () {
     return Inertia::render('BreedSelect');
-})->name('breed.select');
+})->name('race.select');
 
 
 Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {

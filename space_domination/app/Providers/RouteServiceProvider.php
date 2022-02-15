@@ -18,6 +18,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/dashboard';
+    public const SELECT_RACE = '/raceselect';
+    public const SELECT_SERVER = '/serverselect';
 
     /**
      * The controller namespace for the application.
