@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\Race;
 use Inertia\Inertia;
 
 
@@ -27,5 +28,17 @@ class GameController extends Controller
         return Inertia::render('TheGame',
         ["game_state" => $game]
         ); 
+    }
+    public function getRaceslist(Request $request){
+
+        $races = Race::all();
+        foreach($races as $race)
+        {
+            $race->main_image="human-01.jpg";
+        }
+        return Inertia::render('BreedSelect',
+        [ "races" => $races ]
+        ); 
+      
     }
 }

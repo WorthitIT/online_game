@@ -10,6 +10,7 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     ALEX GAAT DIT VERDER INVULLEN :-)
+                      <race-select-component v-bind:races="$page.props.races"/>
                 </div>
             </div>
         </div>
@@ -20,13 +21,13 @@
 <script>
     import { defineComponent } from 'vue'
    import AppLayout from "@/Layouts/AppLayout.vue"
-    import PlayTheGameComponent from '@/Components/PlayTheGameComponent.vue'
+    import RaceSelectComponent from '@/Components/RaceSelectComponent.vue'
 
     export default defineComponent({
         components: {
            AppLayout,
-            PlayTheGameComponent,
-         
+         RaceSelectComponent,
+        
         },
     })
 </script>
