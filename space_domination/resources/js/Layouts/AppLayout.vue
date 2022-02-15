@@ -4,7 +4,7 @@
 
         <jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100 picture-background">
             <nav class="bg-gray-800 border-b border-gray-200">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -215,3 +215,10 @@
         }
     })
 </script>
+<style scoped>
+.picture-background{
+    background-image: url('/img/background.jpeg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+</style>
