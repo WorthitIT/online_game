@@ -23,3 +23,5 @@ Homestead.json
 .phpunit.result.cache
 space_domination/public/css/app.css
 space_domination/public/js/app.js
+space_domination/public/js/app.js
+space_domination/public/css/app.css

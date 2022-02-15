@@ -21666,6 +21666,13 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
 
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  type: "button",
+  "class": "text-xs cancelbtn py-2 px-2 bg-green m-0.5 rounded-lg uppercase"
+}, "Register", -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_jet_validation_errors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-validation-errors");
 
@@ -21736,7 +21743,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_button, {
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["ml-4", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["ml-4 bg-pink text-black m-0.5 rounded-lg", {
       'opacity-25': _ctx.form.processing
     }]),
     disabled: _ctx.form.processing
@@ -21749,7 +21756,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class", "disabled"])])], 32
+  , ["class", "disabled"]), _hoisted_10])], 32
   /* HYDRATE_EVENTS */
   )]);
 }
@@ -25104,18 +25111,17 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_2 = {
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "py-12"
-};
-var _hoisted_3 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "max-w-7xl mx-auto sm:px-6 lg:px-8"
-};
-var _hoisted_4 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-white overflow-hidden shadow-xl sm:rounded-lg"
-};
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_play_the_game_component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("play-the-game-component");
+}, " ALEX GAAT DIT VERDER INVULLEN :-) ")])], -1
+/* HOISTED */
+);
 
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_public_app_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("public-app-layout");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_public_app_layout, {
@@ -25125,11 +25131,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [_hoisted_1];
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_play_the_game_component, {
-        games: _ctx.$page.props.active_games
-      }, null, 8
-      /* PROPS */
-      , ["games"])])])])];
+      return [_hoisted_2];
     }),
     _: 1
     /* STABLE */

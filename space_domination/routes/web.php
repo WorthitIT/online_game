@@ -40,6 +40,8 @@ Route::get('/about', function () {
         Route::get('/playnow', function () {
             return Inertia::render('Public/PlayNow', [  ]);
     })->name("playnow");
+
+    
     
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
