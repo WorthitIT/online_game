@@ -21,3 +21,5 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+space_domination/public/css/app.css
+space_domination/public/js/app.js
