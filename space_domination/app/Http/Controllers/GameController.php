@@ -34,7 +34,14 @@ class GameController extends Controller
         $races = Race::all();
         foreach($races as $race)
         {
-            $race->main_image="human-01.jpg";
+            $images = json_decode($race->images);
+            if (!empty($images) && count($images) > 0){
+                 $race->main_image=$images[0]->image;
+            }
+            else {
+                $race->main_image="human-01.jpg";
+ 
+            }
         }
         return Inertia::render('BreedSelect',
         [ "races" => $races ]
