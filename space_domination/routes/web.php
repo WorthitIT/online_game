@@ -57,6 +57,8 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
         Route::get('/playthegame',[GameController::class, "showActiveGamelist"])->name('playthegame');
 
         Route::get('/thegame/{game_id}/',[GameController::class, "startGame"])->name('thegame');
+  
+        Route::get('/newgame',[GameController::class, "newGame"])->name('game.new');
       
       
 });

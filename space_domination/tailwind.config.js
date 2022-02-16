@@ -21,10 +21,12 @@ module.exports = {
             'gray-dark': '#273444',
             'gray': '#8492a6',
             'gray-light': '#d3dce6',
+            'black': '#121212',
+            'white': '#ffffff'
           },
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Big Shoulders Text', ...defaultTheme.fontFamily.sans],
             },
         },
     },
