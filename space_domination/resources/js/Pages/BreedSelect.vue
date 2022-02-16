@@ -14,10 +14,11 @@
                     <div class="w-5/6 flex">
 
                         <div class="w-2/3">
-                      <race-select-component v-bind:races="$page.props.races"/>
+                       
+                      <race-select-component @race_selected="displaySelectedRace" v-bind:races="$page.props.races"/>
                     </div>
                     <div class="w-1/3">
-                      <race-display-description-component v-bind:race="selected_race"/>
+                      <race-display-description-component v-bind:selected_race="race"/>
                      </div>
                     </div>
                 </div>
@@ -39,12 +40,19 @@
          RaceSelectComponent,
          RaceDisplayDescriptionComponent,
         
+        
         }
 
         ,data(){
        return{
            race: null
         
+       }
+   }
+     ,methods:{
+        
+       displaySelectedRace(race){
+     this.race=race;
        }
    }
     })
