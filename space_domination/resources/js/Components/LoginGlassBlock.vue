@@ -1,7 +1,7 @@
 <template>
 
 
-  <div class="blue-glass w-full">
+  <div class="blue-glass clip-edges w-full">
     <login-component/>
   </div>
     </template>

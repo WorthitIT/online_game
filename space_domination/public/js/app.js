@@ -21828,7 +21828,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "blue-glass w-full"
+  "class": "blue-glass clip-edges w-full"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_login_component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("login-component");
@@ -21915,16 +21915,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "race-images w-full h-full"
+  "class": "race-images w-full h-full relative"
 };
 var _hoisted_2 = ["src"];
+var _hoisted_3 = {
+  "class": "absolute bottom-0 right-0 text-center w-full"
+};
+var _hoisted_4 = {
+  "class": "text-black text-xl border-4 border-blue blue-glass hover:{{race.description}}"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "w-full",
+    "class": "w-full relative",
     src: $options.main_image
   }, null, 8
   /* PROPS */
-  , _hoisted_2)]);
+  , _hoisted_2), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.race.name), 1
+  /* TEXT */
+  )])]);
 }
 
 /***/ }),
@@ -26554,7 +26562,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "font-semibold text-xl text-gray-800 leading-tight"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "bg-blue-50"
-}, " our game is about nothing and everything it doesn't work but it does how you ask find out by playing our game. ")], -1
+}, " beta build ")], -1
 /* HOISTED */
 );
 

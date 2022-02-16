@@ -4,7 +4,7 @@
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                  <div class="bg-blue-50">
-               our game is about nothing and everything it doesn't work but it does how you ask find out by playing our game.
+               beta build
               </div>
             </h2>
         </template>
