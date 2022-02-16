@@ -8,10 +8,10 @@
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                    ALEX GAAT DIT VERDER INVULLEN :-)
-                    <div class="w-1/6"></div>
-                    <div class="w-5/6">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg flex">
+                    
+                    <div class="w-1/6 "></div>
+                    <div class="w-5/6 flex">
 
                         <div class="w-2/3">
                       <race-select-component v-bind:races="$page.props.races"/>
