@@ -4,11 +4,12 @@
 <h4 class="text-black text-xl border-4 border-blue blue-glass">{{selected_race.name}}</h4>
  <img class="w-full  relative" :src="second_image">
 <span class="text-black bg-gray">{{selected_race.description}}</span>
- <jet-button class="ml-4  bg-gray-300 text-white-200 m-0.5 rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+<div class=" w-full flex justify-center py-2">
+ <jet-button class=" blue-glass text-white-200 m-0.5 rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     choose race
                 </jet-button>
 </div>
-    
+</div>
 </template>
 <script>
 import JetNavLink from"@/Jetstream/NavLink"
