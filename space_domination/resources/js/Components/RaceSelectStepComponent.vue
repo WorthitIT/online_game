@@ -9,7 +9,7 @@
                       <race-select-component @race_selected="displaySelectedRace" v-bind:races="$page.props.races"/>
                     </div>
                     <div class="w-1/3">
-                      <race-display-description-component v-bind:selected_race="race"/>
+                      <race-display-description-component @race_submitted="submitRace" v-bind:selected_race="race"/>
                      </div>
                     </div>
                 </div>
@@ -34,14 +34,22 @@
 
         ,data(){
        return{
-           race: null
+           race: null,
+  
+           submitted_race: 0,
         
        }
-   }
-     ,methods:{
+   },
+   emits: ['race_selected']
+     ,
+    methods:{
         
        displaySelectedRace(race){
-     this.race=race;
+         this.race=race;
+       },
+       submitRace(race_id){
+         console.log(race_id);
+        this.$emit("race_selected", race_id);
        }
    }
     })

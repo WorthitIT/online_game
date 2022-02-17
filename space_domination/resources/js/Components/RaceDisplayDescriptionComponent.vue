@@ -1,11 +1,15 @@
 <template>
     
-<div v-if="selected_race!=null" class="text-black bg-gray-300">
-<h4 class="text-black text-xl border-4 border-blue blue-glass">{{selected_race.name}}</h4>
- <img class="w-full  relative" :src="second_image">
-<span class="text-black bg-gray">{{selected_race.description}}</span>
+<div v-if="selected_race!=null" class="text-black bg-gray-300 p-5">
+<h4 class="text-center text-blackfont-extrabold text-2xl mb-5">{{selected_race.name}}</h4>
+<div class=" rounded-full border-1 border-grey-400 ">
+ <img class=" relative " :src="second_image">
+ </div>
+ <div class="w-full mt-5">
+<span class="text-grey-900 text-sm black bg-gray">{{selected_race.description}}</span>
+</div>
 <div class=" w-full flex justify-center py-2">
- <jet-button class=" blue-glass text-white-200 m-0.5 rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+ <jet-button @click.prevent="selectedRace" class=" mt-5 blue-glass text-white-200  rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     choose race
                 </jet-button>
 </div>
@@ -25,6 +29,8 @@ export default {
      JetButton,
         
     },
+      emits: ['race_submitted'],
+ 
    props: [
        "selected_race",
    ]
@@ -49,6 +55,11 @@ export default {
         }
     return null;
        } 
+   },
+   methods:{
+       selectedRace() {
+           this.$emit("race_submitted", this.selected_race.id);
+       }
    }
   
 }

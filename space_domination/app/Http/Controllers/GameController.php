@@ -38,13 +38,14 @@ class GameController extends Controller
         $steps[] = $step;
 
         $step = new \stdClass;       
-        $step->name = "Server";
-        $steps[] = $step;
- 
-        $step = new \stdClass;       
         $step->name = "Empire";
         $steps[] = $step;
 
+        $step = new \stdClass;       
+        $step->name = "Server";
+        $steps[] = $step;
+ 
+ 
         
         $races = Race::all();
    

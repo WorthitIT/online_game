@@ -19,14 +19,10 @@ export default {
     props: {
         steps: {
             default: []
+        },
+        active_step:{
+            default: 0
         }
-    }
-
-    ,
-    data() {
-         return {
-             active_step: 0
-         }
     }
 }
 </script>
