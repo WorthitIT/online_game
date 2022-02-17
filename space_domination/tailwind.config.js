@@ -12,18 +12,7 @@ module.exports = {
 
     theme: {
 
-        colors: {
-            'transparent': 'transparent',
-            'blue': '#48add0',
-            'orange': '#ffb300',
-            'pink': '#ff49db',
-            'green': '#13ce66',
-            'gray-dark': '#273444',
-            'gray': '#8492a6',
-            'gray-light': '#d3dce6',
-            'black': '#121212',
-            'white': '#ffffff'
-          },
+        
         extend: {
             fontFamily: {
                 sans: ['Big Shoulders Text', ...defaultTheme.fontFamily.sans],

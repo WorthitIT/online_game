@@ -66,6 +66,13 @@ class GameController extends Controller
         ); 
     }
 
+    public function playGame(Request $request){
+        return Inertia::render('Game/GameDashboard',
+        [  ]
+        ); 
+ 
+    }
+
     public function getRaceslist(Request $request){
 
         $races = Race::all();
