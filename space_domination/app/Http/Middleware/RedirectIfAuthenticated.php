@@ -24,16 +24,6 @@ class RedirectIfAuthenticated
  
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                $user = $request->user();
-                $is_playing = false;
-                $player = Player::where("user_id", $user->id)->first();
-                if (empty($player)){
-                    return redirect(RouteServiceProvider::SELECT_RACE);
-                }
-                else if (!$is_playing){
-                    return redirect(RouteServiceProvider::SELECT_SERVER);
-
-                }
                 return redirect(RouteServiceProvider::HOME);
             }
         }

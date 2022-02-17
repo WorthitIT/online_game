@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Game;
+use App\Models\Player;
 use App\Models\Race;
 use Inertia\Inertia;
 
@@ -57,10 +58,16 @@ class GameController extends Controller
     }
 
     public function playGame(Request $request){
-        return Inertia::render('Game/GameDashboard',
-        [  ]
-        ); 
- 
+        $player = Player::where("user_id", $request->user()->id)->first();
+     //   $game = Game::findOrFail($player->game_id);
+        if (empty($player)|| $player->game_id == 0 ){
+            return $this->newGame($request);
+        }
+        else{
+            return Inertia::render('Game/GameDashboard',
+            [ "player" => $player ]
+            ); 
+        }
     }
 
     public function getRaceslist(Request $request){
