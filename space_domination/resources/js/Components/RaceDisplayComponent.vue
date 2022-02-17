@@ -19,7 +19,8 @@ export default {
     setup() {
         
     },
-    components:{        JetNavLink,
+    components:{       
+         JetNavLink,
        
         
     },
