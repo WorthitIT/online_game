@@ -2,7 +2,7 @@
     <public-app-layout title="Dashboard">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                     Welcome {{$page.props.user.name}}
+                     Welcome {{$page.props.user.name}} to {{game.name}}
             </h2>
         </template>
 
@@ -20,12 +20,12 @@
 <script>
     import { defineComponent } from 'vue'
     import PublicAppLayout from "@/Layouts/PublicAppLayout.vue"
-    import PlayTheGameComponent from '@/Components/PlayTheGameComponent.vue'
+    import ServerlistComponent from '@/Components/ServerlistComponent.vue'
 
     export default defineComponent({
         components: {
             PublicAppLayout,
-            PlayTheGameComponent,
+             ServerlistComponent,
          
         },
     })
