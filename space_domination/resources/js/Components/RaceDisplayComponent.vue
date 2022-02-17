@@ -1,9 +1,9 @@
 <template>
     
-    <div @click.prevent="displaySelectedRace(event)" class="race-images w-full h-full relative">
+    <div @click.prevent="displaySelectedRace(event)" class="race-images w-full relative">
          <img class="w-full  relative" :src="main_image">
          <div class="absolute bottom-0 right-0 text-center w-full">
-         <h4 class="text-black text-xl border-4 border-blue blue-glass">{{race.name}}</h4>
+         <h4 class="py-3 text-black text-2xl  bg-gray-100/60 font-extrabold">{{race.name}}</h4>
         
             </div>
     </div>
@@ -53,3 +53,17 @@ export default {
    }
 }
 </script>
+<style scoped>
+.race-images{
+    filter:grayscale(1);
+    overflow:hidden;   
+
+}
+.race-images:hover{
+    filter: grayscale(0);
+    cursor:pointer;
+    
+}
+
+
+</style>

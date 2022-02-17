@@ -2,8 +2,7 @@
  
                 <div class="flex">
                     
-                    <div class="w-1/6 "></div>
-                    <div class="w-5/6 flex">
+                    <div class="w-full flex">
 
                         <div class="w-2/3">
                        
