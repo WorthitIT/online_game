@@ -55,6 +55,7 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
     Route::group(['middleware' => ['auth', 'verified']], function () {
 
         Route::get('/playthegame',[GameController::class, "showActiveGamelist"])->name('playthegame');
+        Route::get('/serverlist',[GameController::class, "showActiveGamelist"])->name('serverlist');
 
         Route::get('/thegame/{game_id}/',[GameController::class, "startGame"])->name('thegame');
   
