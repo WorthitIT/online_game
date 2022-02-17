@@ -46,17 +46,7 @@ class GameController extends Controller
 
         
         $races = Race::all();
-        foreach($races as $race)
-        {
-            $images = json_decode($race->images);
-            if (!empty($images) && count($images) > 0){
-                 $race->main_image=$images[0]->image;
-            }
-            else {
-                $race->main_image="human-01.jpg";
- 
-            }
-        }
+   
         // $race = Race::findOrFail($race_id);
         return Inertia::render('Game/StartNewGame',
         ["steps" => $steps,
