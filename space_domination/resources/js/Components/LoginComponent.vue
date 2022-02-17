@@ -29,7 +29,7 @@
                     Forgot your password?
                 </Link>
 
-            <jet-button class="ml-4  bg-pink text-black m-0.5 rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <jet-button class="ml-4  bg-orange text-black m-0.5 rounded-lg" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
                 </jet-button>
                     <a type="button" class="text-xs cancelbtn py-2 px-2 bg-green m-0.5 rounded-lg uppercase ">Register</a>

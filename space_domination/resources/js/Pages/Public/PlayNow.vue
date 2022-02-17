@@ -21,7 +21,7 @@
                    </div>
                     <div class="sm:col-span-2">
                         <div class="w-1/2 m-auto">
-                       <h2 class="font-extrabold text-2xl text-blue">BUILD, EXPAND, FIGHT and DOMINATE
+                       <h2 class="font-extrabold text-2xl text-white">BUILD, EXPAND, FIGHT and DOMINATE
                        </h2>
                        <p class="text-gray-100 text-sm">This game is still in development. </p>
                        <p>TODO: @GvdV -> Replace this content with a content block from the database!</p>
