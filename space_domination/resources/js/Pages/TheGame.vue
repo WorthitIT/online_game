@@ -20,12 +20,12 @@
 <script>
     import { defineComponent } from 'vue'
     import PublicAppLayout from "@/Layouts/PublicAppLayout.vue"
-    import ServerlistComponent from '@/Components/ServerlistComponent.vue'
+    import ServerListComponent from '@/Components/ServerListComponent.vue'
 
     export default defineComponent({
         components: {
             PublicAppLayout,
-             ServerlistComponent,
+             ServerlLstComponent,
          
         },
     })
