@@ -22,6 +22,20 @@ class GameController extends Controller
         ); 
       
     }
+
+    public function enterGame(Request $request){
+        $user_id = $request->user()->id;
+        $player = Player::updateOrCreate(["user_id" => $user_id],
+        [
+         "game_id" => $request->input("game_id"),
+         "race_id" => $request->input("selected_race"),
+         "score" => 5000,
+         "turn" => 20,
+         ]);
+         return redirect('/game');
+
+    }
+
     public function startGame(Request $request, $game_id){
         
         $game = Game::findOrFail($game_id);
@@ -37,9 +51,9 @@ class GameController extends Controller
         $step->name = "Race";
         $steps[] = $step;
 
-        $step = new \stdClass;       
-        $step->name = "Empire";
-        $steps[] = $step;
+        // $step = new \stdClass;       
+        // $step->name = "Empire";
+        // $steps[] = $step;
 
         $step = new \stdClass;       
         $step->name = "Server";
@@ -49,10 +63,13 @@ class GameController extends Controller
         
         $races = Race::all();
    
+        $games = Game::where("status", "=", "open")->whereOr("status", "=", "running")->paginate(10);
+
         // $race = Race::findOrFail($race_id);
         return Inertia::render('Game/StartNewGame',
         ["steps" => $steps,
-        "races" => $races
+        "races" => $races,
+        "active_games" => $games
 
         ]
         ); 

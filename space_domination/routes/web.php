@@ -61,7 +61,10 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
   
         Route::get('/newgame',[GameController::class, "newGame"])->name('game.new');
         Route::get('/game',[GameController::class, "playGame"])->name('game.play');
-      
+
+        
+        Route::post('/entergame',[GameController::class, "enterGame"])->name('game.start');
+
       
 });
 });

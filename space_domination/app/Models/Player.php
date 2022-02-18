@@ -11,7 +11,9 @@ class Player extends Model
 
     protected $fillable = [
         'score',
-        'turns'
-
+        'turn',
+        'game_id',
+        "race_id",
+        'user_id'
     ];
 }

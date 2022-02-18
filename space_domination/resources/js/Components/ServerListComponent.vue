@@ -2,10 +2,10 @@
     <div>
         <span v-if="games.data.length==0">No active games found!</span>
     <div v-else>
-        <div  class="p-5 justify-center gap-4 sm:grid sm:grid-cols-4 py-1" v-for="game,index in games.data" :key="index">
-            <div class="gap-2  sm:col-span-2 text-left">{{game.name}}</div>
-            <div class="gap-2 sm:col-span-1" v-html="get_game_created_at(game.created_at)"></div>
-            <div class="gap-2 sm:col-span-1 text-right"><jet-button @click.prevent="joinGame(game.id)">JOIN NOW</jet-button></div>
+        <div  class="blue-glass p-5 justify-center gap-4 sm:grid sm:grid-cols-4 py-1 text-white" v-for="game,index in games.data" :key="index">
+            <div class="gap-2  sm:col-span-2 text-left mt-1.5">{{game.name}}</div>
+            <div class="gap-2 sm:col-span-1 mt-1.5" v-html="get_game_created_at(game.created_at)"></div>
+            <div class="gap-2 sm:col-span-1 text-right"><jet-button class="bg-green-500" @click.prevent="joinGame(game.id)">JOIN NOW</jet-button></div>
         </div>
  
    </div>
@@ -25,7 +25,8 @@ export default {
     },
     props: [
         "games"
-    ]
+    ],
+    emits: ["join_game"]
     ,computed:{
     
     
@@ -37,7 +38,8 @@ export default {
     ,methods: {
          joinGame(id){
             console.log(id);
-            this.$inertia.get(route("", [id]));
+            this.$emit("join_game", id);
+          
         },
         get_game_created_at(created_at){
        const date1 = new Date(created_at);
