@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Star extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        "name",
+        "x-axis",
+        "y-axis",
+        "z-axis", 
+        "star_type",
+        "mass",
+        "radius",
+        "luminocsity",
+        "temperature"
+
+    ];
 }

@@ -11,6 +11,7 @@ class Starsystem extends Model
 
     protected $fillable = [
         "name",
-        "max_players"
+        "max_players",
+        "game_id",
     ];
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\GameGenerationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +65,8 @@ Route::group(['middleware' => config('jetstream.middleware', ['web'])], function
 
         
         Route::post('/entergame',[GameController::class, "enterGame"])->name('game.start');
+
+        Route::get('/generategame',[GameGenerationController::class, "generateGameInstance"])->name('game.generate');
 
       
 });
