@@ -16,7 +16,7 @@ class GameGenerationController extends Controller
     const MAX_Y_AXIS = 5000;
     const MAX_Z_AXIS = 2000;
 
-    const MAX_RADIUS = 1000;
+    const MAX_RADIUS = 800;
 
     public function generateGameInstance(Request $request){
 
@@ -46,32 +46,32 @@ class GameGenerationController extends Controller
         );
         for($index=0; $index<$nr_of_stars;$index++){
             
-            $radius = random_int(0, self::MAX_RADIUS) / 100;
-            $deviation = random_int(-1, 5) / 100;
+            $radius = floatval(random_int(0, self::MAX_RADIUS));
+            $deviation = floatval(random_int(-1, 5)) / 100;
             $mass = abs(pow($radius,2) + $deviation);
-            $luminocity = $radius * 1.5 + random_int(-3, 3) / 10;
+            $luminocity = $radius * 1.5 + floatval(random_int(-3, 3)) / 10;
             $star_type = "O";
-            if ( $radius < 0.7) {
+            if ( $radius < 70) {
                 $star_type = "M";
                 
             }
-            else if ( $radius < 0.96 && $radius >= 0.7) {
+            else if ( $radius < 96 && $radius >= 70) {
                 $star_type = "K";
                 
             }
-            else if ( $radius < 1.15 && $radius >= 0.96) {
+            else if ( $radius < 115 && $radius >= 96) {
                 $star_type = "G";
                 
             }
-            else if ( $radius < 1.4 && $radius >= 1.15) {
+            else if ( $radius < 140 && $radius >= 115) {
                 $star_type = "F";
                 
             }
-            else if ( $radius < 1.8 && $radius >= 1.4) {
+            else if ( $radius < 180 && $radius >= 140) {
                 $star_type = "A";
                 
             }
-            else if ( $radius <6.6 && $radius >= 1.8) {
+            else if ( $radius <660 && $radius >= 180) {
                 $star_type = "B";
                 
             }
