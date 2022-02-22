@@ -81,6 +81,39 @@ class GameController extends Controller
         $player = Player::where("user_id", $request->user()->id)->first();
         $starsystem = Starsystem::where("game_id", $player->game_id)->first();
         $stars = Star::where("starsystem_id", $starsystem->id)->get();
+        foreach ($stars as &$star){
+            switch ($star->star_type){
+                case "O":{
+                    $star->color = "#0000f3";
+                    break;
+                }
+                case "B":{
+                    $star->color = "#A2C0FF";
+                    break;
+                }
+                case "A":{
+                    $star->color = "#D5E0FF";
+                    break;
+                }
+                case "F":{
+                    $star->color = "#F9F5FF";
+                    break;
+                }
+                case "G":{
+                    $star->color = "#FFEDE3";
+                    break;
+                }
+                case "K":{
+                    $star->color = "#FFDAB5";
+                    break;
+                }
+                case "M":{
+                    $star->color = "#FFB56C";
+                    break;
+                }
+            }
+            
+        }
      //   $game = Game::findOrFail($player->game_id);
         if (empty($player)|| $player->game_id == 0 ){
             return $this->newGame($request);

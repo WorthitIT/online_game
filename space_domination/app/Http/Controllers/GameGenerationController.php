@@ -51,27 +51,27 @@ class GameGenerationController extends Controller
             $mass = abs(pow($radius,2) + $deviation);
             $luminocity = $radius * 1.5 + floatval(random_int(-3, 3)) / 10;
             $star_type = "O";
-            if ( $radius < 70) {
+            if ( $radius < 0.70) {
                 $star_type = "M";
                 
             }
-            else if ( $radius < 96 && $radius >= 70) {
+            else if ( $radius < 0.96 && $radius >= 0.70) {
                 $star_type = "K";
                 
             }
-            else if ( $radius < 115 && $radius >= 96) {
+            else if ( $radius < 1.15 && $radius >= 0.96) {
                 $star_type = "G";
                 
             }
-            else if ( $radius < 140 && $radius >= 115) {
+            else if ( $radius < 1.40 && $radius >=1.15) {
                 $star_type = "F";
                 
             }
-            else if ( $radius < 180 && $radius >= 140) {
+            else if ( $radius < 1.80 && $radius >= 1.40) {
                 $star_type = "A";
                 
             }
-            else if ( $radius <660 && $radius >= 180) {
+            else if ( $radius <6.60 && $radius >= 1.80) {
                 $star_type = "B";
                 
             }
