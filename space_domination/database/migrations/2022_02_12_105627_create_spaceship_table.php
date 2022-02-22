@@ -13,7 +13,7 @@ class CreateSpaceshipTable extends Migration
      */
     public function up()
     {
-        Schema::create('spaceship', function (Blueprint $table) {
+        Schema::create('spaceships', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateSpaceshipTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spaceship');
+        Schema::dropIfExists('spaceships');
     }
 }

@@ -13,7 +13,7 @@ class AddGameIdToStarsystem extends Migration
      */
     public function up()
     {
-        Schema::table('starsystem', function (Blueprint $table) {
+        Schema::table('starsystems', function (Blueprint $table) {
             //
             if (!Schema::hasColumn('starsystem', 'game_id')) {
          

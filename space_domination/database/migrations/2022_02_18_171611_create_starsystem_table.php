@@ -13,7 +13,7 @@ class CreateStarsystemTable extends Migration
      */
     public function up()
     {
-        Schema::create('starsystem', function (Blueprint $table) {
+        Schema::create('starsystems', function (Blueprint $table) {
             $table->id();
             $table->string("name");
             $table->integer("max_players");

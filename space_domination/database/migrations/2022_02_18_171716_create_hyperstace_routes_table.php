@@ -13,7 +13,7 @@ class CreateHyperstaceRoutesTable extends Migration
      */
     public function up()
     {
-        Schema::create('hyperspace_tunnel', function (Blueprint $table) {
+        Schema::create('hyperspace_tunnels', function (Blueprint $table) {
             $table->id();
             $table->integer("planet1_id");
             $table->integer("planet2_id");
@@ -28,6 +28,6 @@ class CreateHyperstaceRoutesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hyperstace_routes');
+        Schema::dropIfExists('hyperstace_tunnels');
     }
 }
