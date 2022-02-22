@@ -11,14 +11,15 @@ class Star extends Model
 
     protected $fillable = [
         "name",
-        "x-axis",
-        "y-axis",
-        "z-axis", 
+        "x",
+        "y",
+        "z", 
         "star_type",
         "mass",
         "radius",
-        "luminocsity",
-        "temperature"
+        "luminocity",
+        "temperature",
+        "starsystem_id"
 
     ];
 }

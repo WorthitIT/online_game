@@ -28,6 +28,6 @@ class CreateHyperstaceRoutesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hyperstace_tunnels');
+        Schema::dropIfExists('hyperspace_tunnels');
     }
 }

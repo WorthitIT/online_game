@@ -15,14 +15,15 @@ class CreateStarsTable extends Migration
     {
         Schema::create('stars', function (Blueprint $table) {
             $table->id();
+            $table->integer("starsystem_id");
             $table->string("name");
-            $table->float("x-axis");
-            $table->float("y-axis");
-            $table->float("z-axis");
+            $table->float("x");
+            $table->float("y");
+            $table->float("z");
             $table->enum("star_type", ["O", "B", "A", "F", "G", "K", "M", "DWARF"]);
-            $table->integer("mass");
-            $table->integer("radius");
-            $table->integer("luminocsity");
+            $table->float("mass");
+            $table->float("radius");
+            $table->float("luminocity");
             $table->integer("temperature");
             $table->timestamps();
         });
