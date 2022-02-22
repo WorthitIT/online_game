@@ -24,5 +24,10 @@
         "tailwindcss": "^3.0.0",
         "vue": "^3.0.5",
         "vue-loader": "^16.1.2"
+    },
+    "dependencies": {
+        "@polygonjs/polygonjs": "github:polygonjs/polygonjs",
+        "three": "^0.134.0",
+        "troisjs": "^0.3.4"
     }
 }

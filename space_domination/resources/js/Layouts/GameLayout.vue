@@ -3,7 +3,12 @@
  
           <div class="min-h-screen bg-gray-900	">
               <game-header />
+            <main>
+                <slot></slot>
+            </main>
           </div>
+                     <!-- Page Content -->
+ 
     </div>
  
 </template>
