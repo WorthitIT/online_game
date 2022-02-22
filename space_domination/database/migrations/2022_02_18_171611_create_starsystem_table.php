@@ -29,6 +29,6 @@ class CreateStarsystemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('starsystem');
+        Schema::dropIfExists('starsystems');
     }
 }
