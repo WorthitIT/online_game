@@ -14,9 +14,9 @@ class GameGenerationController extends Controller
     const Max_Tunels_Per_Star= 5;
     const Min_Tunels_Per_Star= 1;
     const STAR_CLASSIFICATION = ["O", "B", "A", "F", "G", "K", "M", "DWARF"];
-    const MAX_X_AXIS = 1000;
-    const MAX_Y_AXIS = 1000;
-    const MAX_Z_AXIS = 300;
+    const STARSYSTEM_RADIUS = 2000;
+    const MIN_CENTER_SYSTEM = 300;
+ 
 
     const MAX_RADIUS = 800;
 
@@ -82,9 +82,9 @@ class GameGenerationController extends Controller
             $star=Star::create([
                 "name" => "STAR_".$index,
                 "starsystem_id" => $star_system->id,
-                "x" => random_int(-self::MAX_X_AXIS, self::MAX_X_AXIS),
-                "y" => random_int(-self::MAX_Y_AXIS, self::MAX_Y_AXIS),
-                "z" => random_int(-self::MAX_Z_AXIS, self::MAX_Z_AXIS),
+                "x" => $x,
+                "y" => $y,
+                "z" => 0,
                 "star_type" => $star_type,
                 "mass" => $mass,
                 "radius" => $radius,
