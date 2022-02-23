@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class HyperspaceTunnel extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'star1_id', 'star2_id'
+      
+    ];
 }

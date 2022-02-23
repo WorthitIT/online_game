@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Starsystem;
 use App\Models\Game;
 use App\Models\Star;
-
+use App\Models\HyperspaceTunnel;
 class GameGenerationController extends Controller
 {
     //
     const MAX_PLAYERS = 256;
+    const Max_Tunels_Per_Star= 5;
+    const Min_Tunels_Per_Star= 1;
     const STAR_CLASSIFICATION = ["O", "B", "A", "F", "G", "K", "M", "DWARF"];
     const MAX_X_AXIS = 1000;
     const MAX_Y_AXIS = 1000;
@@ -44,6 +46,7 @@ class GameGenerationController extends Controller
                 "game_id" => $game->id
             ]
         );
+        $stars=array();
         for($index=0; $index<$nr_of_stars;$index++){
             
             $radius = floatval(random_int(0, self::MAX_RADIUS))/100;
@@ -76,7 +79,7 @@ class GameGenerationController extends Controller
                 
             }
 
-            Star::create([
+            $star=Star::create([
                 "name" => "STAR_".$index,
                 "starsystem_id" => $star_system->id,
                 "x" => random_int(-self::MAX_X_AXIS, self::MAX_X_AXIS),
@@ -89,7 +92,21 @@ class GameGenerationController extends Controller
                 "temperature" => random_int(1000, 10000000),
             ]);
 
-            
+            $stars[]=$star;
         }
+        $this->createHyperspacetunnels($stars);
+    }
+    private function createHyperspacetunnels($stars){
+    
+        foreach ($stars as $star){
+        $star2 = $this->determineEndPoint($star, $stars);
+        HyperspaceTunnel::create([
+            'star1_id'=>$star->id,
+            'star2_id'=>$star2->id,
+        ]);
+        }
+    }
+    private function determineEndPoint($star, $stars){
+        return $stars[random_int(0,count($stars)-1)];
     }
 }
