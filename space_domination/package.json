@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "@polygonjs/polygonjs": "github:polygonjs/polygonjs",
-        "three": "^0.134.0",
+        "three": "^0.137.5",
         "troisjs": "^0.3.4"
     }
 }
