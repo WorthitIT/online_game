@@ -49,6 +49,7 @@ class GameGenerationController extends Controller
         $stars=array();
         for($index=0; $index<$nr_of_stars;$index++){
             
+           
             $radius = floatval(random_int(0, self::MAX_RADIUS))/100;
             $deviation = floatval(random_int(-1, 5)) / 100;
             $mass = abs(pow($radius,2) + $deviation);
@@ -79,7 +80,13 @@ class GameGenerationController extends Controller
                 
             }
 
-            $star=Star::create([
+            $angle = (mt_rand() / mt_getrandmax()) * 2*pi();
+            $length = random_int(self::MIN_CENTER_SYSTEM, self::STARSYSTEM_RADIUS);
+
+            $x = cos($angle) * $length;
+            $y = sin($angle) * $length;
+
+            Star::create([
                 "name" => "STAR_".$index,
                 "starsystem_id" => $star_system->id,
                 "x" => $x,
