@@ -1,6 +1,6 @@
 <template>
     <game-layout>
-        <map-view-component/>
+        <map-view-component v-bind:stars="$page.props.stars" v-bind:hyperspacetunnels="$page.props.hyperspacetunnel"/>
     </game-layout>
 </template>
 <script>

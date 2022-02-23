@@ -8,7 +8,7 @@
       <PointLight :position="{ y: 500, z: 0 }" />
       <PointLight color="#ff6000" :intensity="100" :position="{ y: -500, z: 100, x: 100 }" />
      <Sphere v-for="star,index in $page.props.stars" :key="index"  :radius="star.radius" :position="{ x: star.x, y: star.y, z: star.z}">
-         <BasicMaterial :color="star.color" />
+         <PhongMaterial :color="star.color" />
       </Sphere>
     </Scene>
   </Renderer>
@@ -21,23 +21,36 @@ import {Sphere, Camera, PhongMaterial, PointLight, Renderer, Scene,AmbientLight 
 import { Vector3, BufferGeometry, LineBasicMaterial, Line} from 'three';
 export default {
   mounted()
+
 {
+  
 const scene = this.$refs.scene;
 const camera = this.$refs.camera;
 const renderer = this.$refs.renderer;
+console.log(this.hyperspacetunnels);
+console.log(this.stars);
+for(let i in this.hyperspacetunnels)
 
+{
+ const hyperspacetunnel = this.hyperspacetunnels[i];
+ const points = [];
+ for(let j in this.stars){
+   const star= this.stars[j];
+   if (hyperspacetunnel.star1_id == this.stars[j].id || hyperspacetunnel.star2_id == this.stars[j].id){
+     points.push( new Vector3( star.x, star.y, star.z ) );
+   };
+ }
 const material = new LineBasicMaterial( { color: 0x0000ff } );
-const points = [];
-points.push( new Vector3( 0, 0, 0 ) );
-points.push( new Vector3( 200, 200, 0 ) );
+
 
 
 const geometry = new BufferGeometry().setFromPoints( points );
 const line = new Line( geometry, material );
 scene.add(line);
+}
 renderer.render(scene, camera);
 },
-  props: ["stars"],
+  props: ["stars","hyperspacetunnels"],
   components: {  Sphere, Camera, PhongMaterial, PointLight, Renderer, Scene,AmbientLight, Vector3, BufferGeometry, Line },
 };
 

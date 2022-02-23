@@ -9,7 +9,7 @@ use App\Models\Race;
 use App\Models\Starsystem;
 use App\Models\Star;
 use Inertia\Inertia;
-
+use App\Models\HyperspaceTunnel;
 
 class GameController extends Controller
 {
@@ -81,6 +81,8 @@ class GameController extends Controller
         $player = Player::where("user_id", $request->user()->id)->first();
         $starsystem = Starsystem::where("game_id", $player->game_id)->first();
         $stars = Star::where("starsystem_id", $starsystem->id)->get();
+         $hyperspacetunnel = Hyperspacetunnel::all(); 
+        //geert fix pls
         foreach ($stars as &$star){
             switch ($star->star_type){
                 case "O":{
@@ -122,7 +124,8 @@ class GameController extends Controller
             return Inertia::render('Game/GameDashboard',
             [ "player" => $player,
               "starsystem"=> $starsystem,
-              "stars" => $stars
+              "stars" => $stars,
+              "hyperspacetunnel" => $hyperspacetunnel,
              ]
             ); 
         }
