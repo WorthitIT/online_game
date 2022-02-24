@@ -11,11 +11,13 @@ class GameGenerationController extends Controller
 {
     //
     const MAX_PLAYERS = 256;
-    const Max_Tunels_Per_Star= 5;
-    const Min_Tunels_Per_Star= 1;
+    const MAX_TUNNELS_PER_STAR= 3;
+    const MIN_TUNNELS_PER_STAR= 1;
+    const MAX_HYPERTUNNEL_DISTANCE = 300;
     const STAR_CLASSIFICATION = ["O", "B", "A", "F", "G", "K", "M", "DWARF"];
     const STARSYSTEM_RADIUS = 2000;
     const MIN_CENTER_SYSTEM = 300;
+    
  
 
     const MAX_RADIUS = 800;
@@ -86,7 +88,7 @@ class GameGenerationController extends Controller
             $x = cos($angle) * $length;
             $y = sin($angle) * $length;
 
-            Star::create([
+            $star= Star::create([
                 "name" => "STAR_".$index,
                 "starsystem_id" => $star_system->id,
                 "x" => $x,
@@ -106,14 +108,37 @@ class GameGenerationController extends Controller
     private function createHyperspacetunnels($stars){
     
         foreach ($stars as $star){
-        $star2 = $this->determineEndPoint($star, $stars);
+        $endpoints = $this->determineEndPoint($star, $stars);
+        foreach ($endpoints as $endpoint)
         HyperspaceTunnel::create([
             'star1_id'=>$star->id,
-            'star2_id'=>$star2->id,
+            'star2_id'=>$endpoint->id,
         ]);
         }
     }
     private function determineEndPoint($star, $stars){
-        return $stars[random_int(0,count($stars)-1)];
+        $endpoints = array();
+        $hypertunnels = random_int(self::MIN_TUNNELS_PER_STAR, self::MAX_TUNNELS_PER_STAR);
+        $backup=null;
+        foreach ($stars as $endpoint){
+            $x = $star->x - $endpoint->x;
+            $y = $star->y - $endpoint->y;
+            $distance = sqrt(pow($x,2) + pow($y,2));
+            $tunnels = HyperspaceTunnel::where("star1_id", $endpoint->id)->where("star2_id", $star->id)->count();
+            $has_tunnels = HyperspaceTunnel::where("star1_id", $endpoint->id)->count();
+            if ($has_tunnels==0 && $tunnels==0 && $distance <= self::MAX_HYPERTUNNEL_DISTANCE){
+                $endpoints[] = $endpoint;
+            }
+            if ($has_tunnels<self::MAX_TUNNELS_PER_STAR && $distance <=self::MAX_HYPERTUNNEL_DISTANCE ){
+                $backup = $endpoint;
+             }
+            if ($hypertunnels == count($endpoints)){
+                return $endpoints;
+            }
+        }
+        if (count($endpoints)==0){
+               $endpoints[] = $backup;
+        }
+        return $endpoints;
     }
 }
