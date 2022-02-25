@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Starsystem;
 use App\Models\Game;
 use App\Models\Star;
+use App\Models\planets;
 use App\Models\HyperspaceTunnel;
 class GameGenerationController extends Controller
 {
@@ -23,7 +24,7 @@ class GameGenerationController extends Controller
     const MAX_RADIUS = 800;
 
     public function generateGameInstance(Request $request){
-
+        $nr_of_planets = 500;
         $nr_of_stars = 500;
   //      $avg_resource_lvl = $request->input("resource_lvl");
   //      $avg_planets_per_system = $request->input("agv_planets");
@@ -41,7 +42,7 @@ class GameGenerationController extends Controller
         ]);
         
 
-        $star_system = Starsystem::create(
+        $star_system = Starsystem::create (
             [
                 "name" => "Starsyetem_".((new \DateTime())->getTimestamp()),
                 "max_players" => self::MAX_PLAYERS,

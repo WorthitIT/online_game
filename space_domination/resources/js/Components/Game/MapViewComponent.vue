@@ -1,7 +1,7 @@
 <template>
     <div style="height: 90vh" class="w-full">
 
-  <Renderer height="500" resize ref="renderer">
+  <Renderer height="500" resize antialias :orbit-ctrl="{enableDamping: true, dampingFactor: 0.05 }">
     <Camera ref="camera" :position="{ z: 1000 }" />
     <Scene ref="scene">
         <AmbientLight :intensity="0.5" />
