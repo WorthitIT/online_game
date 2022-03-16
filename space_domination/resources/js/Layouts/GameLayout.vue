@@ -1,7 +1,8 @@
 <template>
     <div>
  
-          <div class="min-h-screen bg-gray-900	">
+        <Head :title="title" />
+         <div class="min-h-screen bg-blue-900	">
               <game-header />
             <main>
                 <slot></slot>

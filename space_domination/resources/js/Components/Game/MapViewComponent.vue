@@ -7,11 +7,12 @@
         <AmbientLight :intensity="0.5" />
       <PointLight :position="{ y: 500, z: 0 }" />
       <PointLight color="#ff6000" :intensity="100" :position="{ y: -500, z: 100, x: 100 }" />
-     <Sphere v-for="star,index in $page.props.stars" :key="index"  :radius="star.radius" :position="{ x: star.x, y: star.y, z: star.z}">
+     <Sphere @click="this.$emit('starpressed', star)" v-for="star,index in $page.props.stars" :key="index"  :radius="star.radius" :position="{ x: star.x, y: star.y, z: star.z}">
          <PhongMaterial :color="star.color" />
       </Sphere>
     </Scene>
   </Renderer>
+
   </div>
  
 </template>
@@ -48,9 +49,13 @@ const geometry = new BufferGeometry().setFromPoints( points );
 const line = new Line( geometry, material );
 scene.add(line);
 }
-renderer.render(scene, camera);
 },
+  emits: ["starpressed"],
   props: ["stars","hyperspacetunnels"],
+  data() { return { 
+        is_showing: true
+    }
+  },
   components: {  Sphere, Camera, PhongMaterial, PointLight, Renderer, Scene,AmbientLight, Vector3, BufferGeometry, Line },
 };
 
