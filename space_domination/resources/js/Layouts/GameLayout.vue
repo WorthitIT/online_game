@@ -26,4 +26,4 @@ export default {
         GameHeader
     }
 }
-</script>
+</script> 
